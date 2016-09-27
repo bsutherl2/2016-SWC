@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    <title>SWC ps-02/A</title>
+    </head>
+      <body>
+        <div>
+          <table class="magic">
+            <tr>
+              <th>
+          <h1 class="magic">Brooks Sutherland</h1>
+            </th>
+              </tr>
+            <tr>
+              <td>
+          <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/14212156_10155282566057195_507507014418031922_n.jpg?oh=5f4c967f374568151f9fe564ccf707fc&oe=586C9970" />
+            </tr>
+              </td>
+            <tr>
+              <td>
+      <ul>
+          <li><em>Journalist</em></li>
+          <li><em>Michigander</em></li>
+          <li><em>Sports enthusiast</em></li>
+        </ul>
+
+        <right><p> Brooks Sutherland is a journalist from Michigan currently studying Media Innovation at Northeastern University.</P>
+        <p>email: sutherland.b@husky.neu.edu</p>
+            </tr>
+              </td>
+            </tr>
+              </td>
+            </table>
+          </div>
+        </body>
+      </html>

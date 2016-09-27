@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    <title>SWC ps-02/loud</title>
+    </head>
+      <body style="background-color: red">
+        <h1 style="font-family: verdana; color: black; font-size: 600px">Loud</h1>
+          <h2 style="font-family: verdana; color: black; font-size: 20px">quiet</h2>
+      </body>
