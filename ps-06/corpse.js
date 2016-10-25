@@ -51,17 +51,17 @@ bsutherl2.drawLeg = function(ctx, left) {
 
 bsutherl2.drawTop = function(ctx) {
 
-  drawImage('head.jpg', ctx, 0, 0);
+  drawImage('https://bsutherl2.github.io/2016-SWC/ps-06/head.jpg', ctx, 0, 0);
 };
 
 bsutherl2.drawMiddle = function(ctx) {
-    drawImage('body.jpg', ctx, 0, 240);
+    drawImage('https://bsutherl2.github.io/2016-SWC/ps-06/body.jpg', ctx, 0, 240);
 
 
 };
 
 bsutherl2.drawBottom = function(ctx){
-  drawImage('legs.jpg', ctx, 0, 480);
+  drawImage('https://bsutherl2.github.io/2016-SWC/ps-06/legs.jpg', ctx, 0, 480);
 };
 
 bsutherl2.drawCorpse = function(ctx) {
