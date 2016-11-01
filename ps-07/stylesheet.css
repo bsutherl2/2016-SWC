@@ -1,0 +1,47 @@
+body {
+  background-color: gainsboro;
+
+
+}
+h1 {
+  font-family: "Yanone Kaffeesatz";
+  color: gray;
+  size: 20px;
+}
+h1:hover {
+  font-family: "Lucida Console";
+  color: DarkGray;
+  font-size: 40px;
+}
+h2 {
+  font-family: "Yanone Kaffeesatz";
+  color: gray;
+}
+h2:hover {
+    font-family: "Lucida Console";
+    color: DarkGray;
+    font-size: 20px
+}
+h3  {
+  font-family: "Yanone Kaffeesatz";
+  color: gray;
+}
+h3:hover  {
+  font-family: "Lucida Console";
+  color: DarkGray;
+}
+a:hover  {
+  font-family: "Lucida Console";
+  color: DarkGray;
+  font-size: 20px;
+}
+canvas { border: 5px solid gray}
+#mouseInfo { color: gray;
+  font-family: "Yanone Kaffeesatz";
+  size: 15px;
+}
+a {
+  color: gray;
+  size: 5px;
+  font-family: "Yanone Kaffeesatz";
+}
