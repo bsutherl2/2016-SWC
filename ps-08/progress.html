@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<br>
+<br>
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
+<link href="https://fonts.googleapis.com/css?family=Oswald|Shrikhand" rel="stylesheet">
+
+<style>
+#myProgress {
+  position: relative;
+  width: 50%;
+  height: 50px;
+  background-color: #ddd;
+}
+
+#myBar {
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background-color: #6E6E6E;
+}
+</style>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><div id="myProgress">
+  <div id="myBar"></div>
+</div><center>
+<script type="text/javascript" src="random.js"></script>
+</body>
+<br>
+<button onclick="move()">Begin</button>
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
+</script>
+<br>
+<br>
+<a href="index.html">Home</a>
+
+</body>
+</html>
