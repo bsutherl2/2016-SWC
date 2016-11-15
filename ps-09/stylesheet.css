@@ -1,0 +1,50 @@
+body {
+  background-color: black;
+}
+h1 {
+  font-family: "Ranga";
+  color: DarkGray;
+  font-size: 40px;
+}
+h2 {
+  font-family: "Ranga";
+  color: DarkGray;
+  font-size: 20px
+}
+h3  {
+  font-family: "Ranga";
+  color: DarkGray;
+  font-size: 15px
+}
+a {
+  font-family: "Ranga";
+  color: DarkGray;
+  font-size: 10px;
+}
+h4 {
+  font-family: "Ranga";
+  color: DarkGray;
+  font-size: 20px;
+  text-align: right;
+}
+canvas {
+  border: 1px solid black;
+  padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 500px;
+}
+h1 {
+  font-family: "Ranga";
+  color: DarkGray;
+  font-size: 60px;
+  text-align: center;
+}
+a {
+  font-family: "Ranga";
+  color: DarkGray;
+  font-size: 30px;
+  text-align: center;
+}
