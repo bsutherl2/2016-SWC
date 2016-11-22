@@ -1,14 +1,14 @@
 var myWeights = [
   {age: 1, weight: 27},
   {age: 2, weight: 11},
-  {age: 3, weight: 5},
+  {age: 3, weight: 8},
   {age: 4, weight: 5},
   {age: 5, weight: 5},
   {age: 6, weight: 5},
   {age: 7, weight: 5},
-  {age: 8, weight: 4},
+  {age: 8, weight: 5},
   {age: 9, weight: 4},
-  {age: 10, weight: 3},
+  {age: 10, weight: 4},
   {age: 11, weight: 3},
   {age: 12, weight: 3},
   {age: 13, weight: 3},
@@ -18,17 +18,15 @@ var myWeights = [
   {age: 17, weight: 2},
   {age: 18, weight: 2},
   {age: 19, weight: 2},
-  {age: 20, weight: 1},
-  {age: 21, weight: 1},
+  {age: 20, weight: 2},
+  {age: 21, weight: 2},
   {age: 22, weight: 1},
   {age: 23, weight: 1},
   {age: 24, weight: 1},
   {age: 25, weight: 1},
   {age: 26, weight: 1},
-  {age: 27, weight: 0},
-  {age: 28, weight: 0},
-  {age: 29, weight: 0},
-  {age: 30, weight: 0}
+  {age: 27, weight: 1},
+  {age: 28, weight: 1}
 ];
 
 var height = 1000;
