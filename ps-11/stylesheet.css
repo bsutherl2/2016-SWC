@@ -1,0 +1,86 @@
+body {
+  background-color: Gainsboro;
+}
+h1 {
+  font-family: "Ranga";
+  color: black;
+  font-size: 60px;
+}
+h2 {
+  font-family: "Ranga";
+  color: black;
+  font-size: 40px;
+}
+h3  {
+  font-family: "Ranga";
+  color: black;
+  font-size: 20px;
+}
+a {
+  font-family: "Ranga";
+  color: black;
+  font-size: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 4em;
+  font-family: "Ranga", sans-serif;
+  color: hsl(100, 100%, 100%);
+  background-color: hsl(0, 0%, 86%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+svg {
+  background-color: hsl(0,0%,86%);
+  font-size: 20pt;
+  font-family: "Ranga";
+  color: white;
+}
+
+
+.horizontal-bar {
+  width: 500px;
+  display: flex;
+  padding: 1em;
+  justify-content: space-around;
+  justify-self: stretch;
+  font-size: 13pt;
+  color: hsl(0,0%,0%);
+}
+.top {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.footnote {
+
+}
+h1 {
+  color: black;
+  font-size: 30px;
+}
+h4 {
+  color: black;
+  font-size: 8px;
+  text-align: left;
+}
+h1 {font-family: "Ranga";
+color: black;
+font-size: 20px;
+}
+h2{font-family: "Ranga";
+color: black;
+font-size: 13px;
+text-align:left;
+
+}
+
+}
+h4 {font-family: "Ranga";
+color: black;
+font-size: 11px;
+}
