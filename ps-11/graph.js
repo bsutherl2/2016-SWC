@@ -1,4 +1,3 @@
-// A simple bar chart
 var width = 500;
 var height =500;
 
@@ -12,7 +11,6 @@ var svg = d3.select("body")
   .attr("width",width)
   .attr("height",height);
 
-// Generate data
 
 var data = [{x:"NYY", y:27},
 		{x:"MON", y:24},
@@ -21,7 +19,7 @@ var data = [{x:"NYY", y:27},
 		{x:"*Tie(2)", y:13}
 ];
 
-// Create scales
+
 var xScale = d3.scaleBand()
 	.domain(["NYY","MON","BOS","LAL","*Tie(2)"])
   	.rangeRound([margin.left, width - margin.right]);
@@ -30,7 +28,7 @@ var yScale = d3.scaleLinear()
 	.domain([0,30])
   	.range([height-margin.bottom, margin.top]);
 
-// Draw axes
+
 var xAxis = svg.append("g")
 	.attr("transform","translate(0," + (height-margin.bottom) + ")")
 	.call(d3.axisBottom().scale(xScale));
@@ -39,7 +37,7 @@ var yAxis = svg.append("g")
 	.attr("transform","translate(" + margin.left + ",0)")
 	.call(d3.axisLeft().scale(yScale));
 
-// Draw bars for bar chart
+
 var barWidth = 20;
 var bars = svg.selectAll("rect")
 	.data(data)
