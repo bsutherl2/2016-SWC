@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Final Project</title>
+  <link type="text/css" rel="stylesheet" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <h1> Top 5 NHL teams by championships</h4>
+    <br>
+
+	<style>
+	#xaxis .domain {
+		fill:none;
+		stroke:#000;
+	}
+	#xaxis text, #yaxis text {
+		font-size: 11px;
+	}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+	</div>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script>
+		var categories= ['','Montreal Canadiens','Toronto Maple Leafs', 'Detroit Red Wings', 'Boston Bruins', 'Chicago Blackhawks', 'Edmonton Oilers'];
+
+		var dollars = [23,13,11,6,6,5];
+
+		var colors = ['#ffffff'];
+
+		var grid = d3.range(25).map(function(i){
+			return {'x1':0,'y1':0,'x2':0,'y2':480};
+		});
+
+		var tickVals = grid.map(function(d,i){
+			if(i>0){ return i*1; }
+			else if(i===0){ return "100";}
+		});
+
+		var xscale = d3.scale.linear()
+						.domain([0,30])
+						.range([0,722]);
+
+		var yscale = d3.scale.linear()
+						.domain([0,categories.length])
+						.range([0,470]);
+
+		var colorScale = d3.scale.quantize()
+						.domain([0,categories.length])
+						.range(colors);
+
+		var canvas = d3.select('#wrapper')
+						.append('svg')
+						.attr({'width':950,'height':600});
+
+		var grids = canvas.append('g')
+						  .attr('id','grid')
+						  .attr('transform','translate(150,10)')
+						  .selectAll('line')
+						  .data(grid)
+						  .enter()
+						  .append('line')
+						  .attr({'x1':function(d,i){ return i*30; },
+								 'y1':function(d){ return d.y1; },
+								 'x2':function(d,i){ return i*30; },
+								 'y2':function(d){ return d.y2; },
+							})
+						  .style({'stroke':'#adadad','stroke-width':'1px'});
+
+		var	xAxis = d3.svg.axis();
+			xAxis
+				.orient('bottom')
+				.scale(xscale)
+				.tickValues(tickVals);
+
+		var	yAxis = d3.svg.axis();
+			yAxis
+				.orient('left')
+				.scale(yscale)
+				.tickSize(1)
+				.tickFormat(function(d,i){ return categories[i]; })
+				.tickValues(d3.range(30));
+
+		var yAxis = canvas.append('g')
+						  .attr("transform", "translate(150,0)")
+						  .attr('id','yaxis')
+						  .call(yAxis);
+
+		var xAxis = canvas.append('g')
+						  .attr("transform", "translate(150,480)")
+						  .attr('id','xaxis')
+						  .call(xAxis);
+
+		var chart = canvas.append('g')
+							.attr("transform", "translate(150,0)")
+							.attr('id','bars')
+							.selectAll('rect')
+							.data(dollars)
+							.enter()
+							.append('rect')
+							.attr('height',23)
+							.attr({'x':0,'y':function(d,i){ return yscale(i)+19; }})
+							.style('fill',function(d,i){ return colorScale(i); })
+							.attr('width',function(d){ return 0; });
+
+
+		var transit = d3.select("svg").selectAll("rect")
+						    .data(dollars)
+						    .transition()
+						    .duration(1000)
+						    .attr("width", function(d) {return xscale(d); });
+
+		var transitext = d3.select('#bars')
+							.selectAll('text')
+							.data(dollars)
+							.enter()
+							.append('text')
+							.attr({'x':function(d) {return xscale(d)-200; },'y':function(d,i){ return yscale(i)+35; }})
+
+
+
+	</script>
+  <div class="links">
+    <ul>
+        <a href="mlb.html"><li>MLB</li></a>
+        <a href="nba.html"><li>NBA</li></a>
+        <a href="nfl.html"><li>NFL</li></a>
+        <a href="index.html"><li>Home</li></a>
+    </ul>
+</div>
+<div class="chart"></div>
+</html>

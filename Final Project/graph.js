@@ -1,5 +1,5 @@
-var width = 500;
-var height =500;
+var width = 600;
+var height =600;
 
 var margin = {top: 25,
 		  left:25,
@@ -12,17 +12,31 @@ var svg = d3.select("body")
   .attr("height",height);
 
 
-var data = [{x:"NYY", y:27},
-		{x:"MON", y:24},
-		{x:"BOS", y:17},
-		{x:"LAL", y:16},
-		{x:"*Tie(2)", y:13}
-    orientation: 'h'
+var data = [{x:"MLB1", y:27},
+		{x:"NHL1", y:23},
+		{x:"NBA1", y:17},
+		{x:"NBA2", y:16},
+		{x:"NHL2", y:13},
+    {x:"NHL3", y:11},
+    {x:"MLB2", y:11},
+    {x:"MLB3", y:8},
+    {x:"NHL4", y:6},
+    {x:"NBA3", y:6},
+    {x:"NFL1", y:6},
+    {x:"MLB4", y:5},
+    {x:"NHL5", y:5},
+    {x:"NBA4", y:5},
+    {x:"NFL2", y:5},
+    {x:"MLB5", y:4},
+    {x:"NBA5", y:4},
+    {x:"NFL3", y:4},
+    {x:"NFL4", y:3},
+    {x:"NFL5", y:2},
 ];
 
 
 var xScale = d3.scaleBand()
-	.domain(["NYY","MON","BOS","LAL","*Tie(2)"])
+	.domain(["MLB1","NHL1","NBA1","NBA2","NHL2","NHL3","MLB2","MLB3","NHL4","NBA3","NFL1","MLB4","NHL5","NBA4","NFL2","MLB5","NBA5","NFL3","NFL4","NFL5"])
   	.rangeRound([margin.left, width - margin.right]);
 
 var yScale = d3.scaleLinear()
@@ -39,7 +53,7 @@ var yAxis = svg.append("g")
 	.call(d3.axisLeft().scale(yScale));
 
 
-var barWidth = 40;
+var barWidth = 20;
 var bars = svg.selectAll("rect")
 	.data(data)
 	.enter()

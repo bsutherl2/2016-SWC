@@ -17,7 +17,6 @@ var data = [{x:"NYY", y:27},
 		{x:"BOS", y:17},
 		{x:"LAL", y:16},
 		{x:"*Tie(2)", y:13}
-    orientation: 'h'
 ];
 
 
@@ -39,7 +38,7 @@ var yAxis = svg.append("g")
 	.call(d3.axisLeft().scale(yScale));
 
 
-var barWidth = 40;
+var barWidth = 20;
 var bars = svg.selectAll("rect")
 	.data(data)
 	.enter()
